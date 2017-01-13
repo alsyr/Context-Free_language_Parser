@@ -1,0 +1,46 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1347\cocoasubrtf570
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0         String s = "21";\
+        test(DemoParsers.number, s);\
+        s = "grandad";\
+        test(DemoParsers.number, s); //should fail\
+        s = "alpha";\
+        test(DemoParsers.name, s);\
+        s = "Beta07aW";\
+        test(DemoParsers.name, s);\
+        s = "091139badf";\
+        test(DemoParsers.name, s); //should fail\
+        s = "true";\
+        test(DemoParsers.boole, s);\
+        s = "false";\
+        test(DemoParsers.boole, s);\
+        s = "kushmoneyking 123";\
+        test(DemoParsers.boole, s); //should fail\
+        s = "&&";\
+        test(DemoParsers.operator, s);\
+        s = "||";\
+        test(DemoParsers.operator, s);\
+        s = "+";\
+        test(DemoParsers.operator, s);\
+        s = "*";\
+        test(DemoParsers.operator, s);\
+        s = "!";\
+        test(DemoParsers.operator, s);\
+        s = "! ||";\
+        test(DemoParsers.operator, s); //should print only first <!>\
+        s = "false";\
+        test(DemoParsers.term, s);\
+        s = "1244326";\
+        test(DemoParsers.term, s);\
+        s = "hEllO312";\
+        test(DemoParsers.term, s);\
+        s = "tango666";\
+        test(DemoParsers.product, s);\
+        s = "Brend4K || true ! 423";\
+        test(DemoParsers.product, s);\
+        s = "42 Brend4K || true ! 423"; //should just print <42>\
+        test(DemoParsers.product, s);}
