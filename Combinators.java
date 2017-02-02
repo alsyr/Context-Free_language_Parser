@@ -18,7 +18,6 @@ public class Combinators {
     Parser parser = new Parser();
     parser.setParser(
         result -> {
-
           if (result.fail) return result;
           List<String> unseen = new ArrayList<>(result.unseen);
           Choice answer = new Choice();
@@ -32,7 +31,6 @@ public class Combinators {
 //                        answer.choice.unseen = unseen;
             return answer;
           }
-
           answer.unseen = result.unseen;
           return answer;
         });
