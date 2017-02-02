@@ -6,17 +6,16 @@
 package cs154.ex5;
 
 /**
- *
  * @author AlSyR
  */
-public class Option extends Result{
-    
-    protected Result option;
-    
-    @Override
-    public String toString() {
-        if(option.fail)
-            return super.toString();
-        return "[" + "? " + option.toString() + "]";
-    }    
+public class Option extends Result {
+
+  protected Result option;
+
+  @Override
+  public String toString() {
+    if (option.fail)
+      return super.toString();
+    return "[" + "? " + option.toString() + "]";
+  }
 }

@@ -9,24 +9,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
  * @author AlSyR
  */
-public class Iteration extends Result{
-    
-    protected List<Result> base;
-    
-    public Iteration()
-    {
-        base = new ArrayList<Result>();
-    }
-    
-    
-    
-    @Override
-    public String toString() {
+public class Iteration extends Result {
+
+  protected List<Result> base;
+
+  public Iteration() {
+    base = new ArrayList<Result>();
+  }
+
+  @Override
+  public String toString() {
 //        if(this.fail && this.pending() != 0)
 //            return super.toString();
-        return "["   + "+ " + base.toString() + "]";
-    }
+    return "[" + "+ " + base.toString() + "]";
+  }
 }

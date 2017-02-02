@@ -6,17 +6,16 @@
 package cs154.ex5;
 
 /**
- *
  * @author AlSyR
  */
-public class Concatenation extends Result{
-    
-    protected Result first, second;
-    
-    @Override
-    public String toString() {
+public class Concatenation extends Result {
+
+  protected Result first, second;
+
+  @Override
+  public String toString() {
 //        if(first.fail || second.fail)
 //            return super.toString();
-        return "["+ first.toString() +  " ~ " + second.toString() + "]";
-    }
+    return "[" + first.toString() + " ~ " + second.toString() + "]";
+  }
 }

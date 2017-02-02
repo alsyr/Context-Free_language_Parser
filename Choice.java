@@ -6,17 +6,16 @@
 package cs154.ex5;
 
 /**
- *
  * @author AlSyR
  */
-public class Choice extends Result{
-    
-    protected Result choice;
-    
-    @Override
-    public String toString() {
-        if(this.fail)
-            return super.toString();
-        return "[" + " | " + choice.toString() + "]";
-    }
+public class Choice extends Result {
+
+  protected Result choice;
+
+  @Override
+  public String toString() {
+    if (this.fail)
+      return super.toString();
+    return "[" + " | " + choice.toString() + "]";
+  }
 }
